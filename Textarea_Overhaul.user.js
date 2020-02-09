@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Wod Textarea Overhaul Wysibb
 // @namespace    github.com/DotIN13/
-// @version      0.2
+// @version      0.5
 // @description  Refreshing Wod textareas with Wysibb 1.5.1
 // @author       DotIN13
 // @match        http://*.world-of-dungeons.org/*
@@ -20,7 +20,7 @@
     $(function()
     {
         var wbbOpt = {
-            buttons: "bold,italic,underline,strike,|,img,link,|,bullist,numlist,|,fontcolor,fontsize,fontfamily,|,justifyleft,justifycenter,justifyright,|,quote,code,table,removeFormat",
+            buttons: "bold,italic,underline,strike,|,img,link,|,bullist,numlist,|,fontcolor,fontsize,fontfamily,|,justifyleft,justifycenter,justifyright,|,quote,code,removeFormat",
             lang: "cn",
             autoresize: true,
             allButtons:
@@ -29,7 +29,8 @@
                 {
                     transform:
                     {
-                        '<div class="quote"><cite>{AUTHOR}写道:</cite>{SELTEXT}</div>': '[quote={AUTHOR}]{SELTEXT}[/quote]'
+                        '<div class="quote"><cite>{AUTHOR}写道:</cite>{SELTEXT}</div>': '[quote={AUTHOR}]{SELTEXT}[/quote]',
+                        '<div class="quote">{SELTEXT}</div>':'[quote]{SELTEXT}[/quote]'
                     }
                 },
                 fs_verysmall:
@@ -69,7 +70,7 @@
                 },
             }
         };
-        $('textarea[name*="message"]').wysibb(wbbOpt);
+        $('textarea').wysibb(wbbOpt);
     })
 
     function addStyleSheet(style)
