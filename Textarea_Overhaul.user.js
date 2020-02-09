@@ -1,14 +1,15 @@
 // ==UserScript==
-// @name         Textarea Overhaul
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @match        http://canto.world-of-dungeons.org/*
+// @name         Wod Textarea Overhaul Wysibb
+// @namespace    github.com/DotIN13/
+// @version      0.2
+// @description  Refreshing Wod textareas with Wysibb 1.5.1
+// @author       DotIN13
+// @match        http://*.world-of-dungeons.org/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
 // @require      http://cdn.wysibb.com/js/jquery.wysibb.min.js
 // @require      http://cdn.wysibb.com/lang/cn.js
 // @resource     wbbCss http://cdn.wysibb.com/css/default/wbbtheme.css
+// @updateURL    https://github.com/DotIN13/Wod_Textarea_Overhaul_Wysibb/raw/master/Textarea_Overhaul.user.js
 // @grant        none
 // ==/UserScript==
 
